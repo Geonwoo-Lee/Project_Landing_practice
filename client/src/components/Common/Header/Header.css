@@ -1,0 +1,27 @@
+.header-background{
+    background-color: #ffffff;
+}
+
+.logo{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.header-flex-box{
+    padding-right: 20px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.grow{
+    flex-grow: 10
+}
