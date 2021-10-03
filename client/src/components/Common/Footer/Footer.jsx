@@ -1,11 +1,11 @@
 import React from 'react'
 
-function LandingHome() {
+function Footer() {
     return (
         <div>
-            
+            hello word!
         </div>
     )
 }
 
-export default LandingHome
+export default Footer
