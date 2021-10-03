@@ -6,7 +6,7 @@ function Landing() {
     return (
         <div>
             <LandingHome />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
