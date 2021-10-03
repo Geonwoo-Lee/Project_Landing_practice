@@ -1,22 +1,49 @@
-.mbody-background{
-    height: 350px;
+.part2-background{
+    height: 580px;
     max-width: 100%;
     padding: 20px; 
 }
 
-.b1-container{
+.part2-container{
     text-align: center;
     margin: auto;
     max-width: 1200px;
 }
 
-.b1-main-title{
+.part2-main-title{
     font-size: 1.5rem;
     padding: 1px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
-.b1-main-contents{
+.part2-main-contents{
     font-size: 1.2rem;
-    padding: 25px;
+}
+
+
+/* 아이콘 */
+
+
+
+.part2-icon-container {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+
+.part2-img-icon{
+    padding: 35px;
+    margin-top: 30px;
+    margin: 0px 40px
+}
+
+.i-one{
+    width: 200px;
+    height: 200px;
+    /* background-color: #1E3BA8; */
+    background-color: #0773F5;
+    border-radius: 50%;
 }
