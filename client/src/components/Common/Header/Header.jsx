@@ -9,7 +9,7 @@ function Header() {
         <div>
         <div className="header-background">
         <div className="header-container">
-        <Link to="/" className="logo"><img src={logo}/></Link>
+        <Link to="/" className="logo"><img src={logo} alt = 'logo'/></Link>
         <div className="grow"></div>
         <Link to="/UrlPage" className="header-flex-box">Url Service</Link>
         <Link to="/BoardPage" className="header-flex-box">Board Page</Link>

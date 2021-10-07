@@ -1,0 +1,35 @@
+
+
+.empty {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10%; */
+    margin-left: 25%;
+    width: 50%;
+}
+p {
+    text-align: center;
+    color: #FF9B8C;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: large;
+}
+
+/* .cissors {
+    font-size: 40px;
+    margin-left: 50%;
+    margin-top: 2%;
+    color: #F2C9E0;
+} */
+
+/* .plus {
+    font-size: 40px;
+    margin-left: 45%;
+    margin-top: 2%;
+} */
+
+.icon-wrap {
+    display: grid;
+}
