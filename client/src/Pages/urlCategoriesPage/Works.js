@@ -1,13 +1,14 @@
 import React from 'react'
-import Search from '../../components/shorten/shortenComponent/Search'
+import { Cards } from '../../components/UrlComponents/Cards'
 import PlusButton from '../../components/UrlComponents/PlusButton'
+import { UrlComponentWrap } from '../../components/utill/Styled'
 
 
 export default function Works() {
     return (
-        <div>
+        <UrlComponentWrap>
         <PlusButton/>
-         <Search/>
-        </div>   
+        <Cards/>
+        </UrlComponentWrap>   
     )
 }

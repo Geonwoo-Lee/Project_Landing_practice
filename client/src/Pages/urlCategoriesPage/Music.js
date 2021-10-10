@@ -1,14 +1,21 @@
 import React from 'react'
-import Search from '../../components/shorten/shortenComponent/Search'
+import { Cards } from '../../components/UrlComponents/Cards'
 import PlusButton from '../../components/UrlComponents/PlusButton'
+import { UrlComponentWrap } from '../../components/utill/Styled'
 
 
 function Music() {
     return (
-        <div>
+        <UrlComponentWrap>
          <PlusButton/>
-         <Search/>
-     </div>   
+         <Cards/>
+         <Cards/>
+         <Cards/>
+         <Cards/>
+         <Cards/>
+         <Cards/>
+         <Cards/>
+     </UrlComponentWrap>   
     )
 }
 

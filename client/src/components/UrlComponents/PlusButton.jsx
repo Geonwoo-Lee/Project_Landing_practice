@@ -1,29 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import { Modal } from './Modal'
+import { UrlComponentWrap } from '../utill/Styled'
+import { UrlPlusButton } from '../utill/Styled'
 
 
-const UrlPlusButton = styled.button`
-padding: 70px;
-margin-left: 20%;
-opacity: 40%;
-margin-top: 10%;
-background-color: #fff;
-border-radius: 10px;
-cursor: pointer;
-border-width: 1px;
-&:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 4px rgba(0, 0, 0, 0.2);
-    transition: all;
-}
-`
+
+
 function PlusButton() {
+    const [isOpen, setIsOpen] = useState(true);
+  const openModalHandler = () => {
+    setIsOpen(!isOpen);
+  };
     return (
-        <div>
-            {/* 여기는 URL 추가 버튼입니다 Etc.js에서 설명 적어놓은대로 입니다 언제든지 변경 가능 합니다 ! */}
-            <UrlPlusButton>
-                + Url 추가하기
-            </UrlPlusButton>
-        </div>
+       <UrlComponentWrap>
+          {isOpen ? <UrlPlusButton onClick = {openModalHandler}>Url 추가 하기</UrlPlusButton> : 
+          <div>
+               <UrlPlusButton onClick = {openModalHandler}>Url 추가 하기</UrlPlusButton>
+              <Modal openModalHandler = {openModalHandler} isOpen = {isOpen} setIsOpen = {setIsOpen}/>
+          </div>
+          }
+       </UrlComponentWrap>
+           
+            
     )
 }
 

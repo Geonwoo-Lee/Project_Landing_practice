@@ -78,14 +78,14 @@ export const Sidebar1= memo(() => {
 
 const Sidebar = styled.div`
   position: absolute;
-  width: 60px;
-  height: 100%;
+  width: 240px;
+  height: 200vh;
   background: #1E6FD9;
   transition: 0.5s;
-  overflow: hidden;
+  /* overflow: hidden;
   &:hover {
     width: 240px;
-  }
+  } */
 `;
 
 const MenuList = styled.ul`
@@ -123,7 +123,7 @@ const MenuItem = styled.li`
   position: relative;
   width: 100%;
   &:hover {
-    background: #90C4F8;
+    background: #82D2F0;
   }
 `;
 
