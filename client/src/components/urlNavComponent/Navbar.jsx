@@ -1,4 +1,5 @@
-import React, { memo } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 import * as AiIcons from 'react-icons/ai';
 import styled from 'styled-components';
 import * as BiIcons from 'react-icons/bi'
@@ -6,75 +7,97 @@ import * as SiIcons from 'react-icons/si'
 import * as GiIcons from 'react-icons/gi'
 
 
-export const Sidebar1= memo(() => {
+export const Sidebar1= () => {
   return (
     
     <Sidebar>
         {/* 여기는 sidebar 입니다 ! 딱히 수정 할 부분은 없을 것 같지만 혹여나 있다면 말씀해주세요 ! ㅎㅎ */}
+
+      
       <MenuList>
-        <MenuItem>
-          <Link href="/UrlPage">
+        <Link to = '/UrlPage' className = "link">
+         <MenuItem>
+          <LinkStyle >
             <IconContainer>
             <AiIcons.AiFillHome />
             </IconContainer>
             <Label>전체보기</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
-
+        </Link>
+       
+        <Link to = "/UrlPage/games" className = "link"> 
         <MenuItem>
-          <Link href="/UrlPage/games">
+          <LinkStyle>
             <IconContainer>
             <BiIcons.BiGame/>
             </IconContainer>
             <Label>Games</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
-
+        </Link>
+        
+        <Link to ="/UrlPage/shopping" className = "link">
         <MenuItem>
-          <Link href="/UrlPage/shopping">
+          <LinkStyle>
             <IconContainer>
              <AiIcons.AiOutlineShopping/>
             </IconContainer>
             <Label>Shopping</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
+        </Link>
 
-        <MenuItem>
-          <Link href="/UrlPage/works">
+        
+        <Link to  ="/UrlPage/works" className = "link">
+         <MenuItem>
+          <LinkStyle >
             <IconContainer>
             <SiIcons.SiCountingworkspro/>
             </IconContainer>
             <Label>Works</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
-        <MenuItem>
-          <Link href="/UrlPage/music">
+        </Link>
+
+       
+        <Link to ="/UrlPage/music" className = "link">
+         <MenuItem>
+          <LinkStyle>
             <IconContainer>
             <GiIcons.GiMusicalNotes/>
             </IconContainer>
             <Label>Music</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
+        </Link>
+       
+        <Link to ="/UrlPage/etc" className = "link">
         <MenuItem>
-          <Link href="/UrlPage/etc">
+          <LinkStyle >
             <IconContainer>
             <BiIcons.BiDotsHorizontalRounded/>
             </IconContainer>
             <Label>Etc</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
+        </Link>
+        
+        <Link to ="/UrlPage/private" className = "link">
         <MenuItem>
-          <Link href="/UrlPage/private">
+          <LinkStyle>
             <IconContainer>
             <AiIcons.AiFillLock/>
             </IconContainer>
             <Label>Private</Label>
-          </Link>
+          </LinkStyle >
         </MenuItem>
+        </Link>
+        
       </MenuList>
     </Sidebar>
   );
-});
+};
 
 const Sidebar = styled.div`
   position: absolute;
@@ -95,6 +118,9 @@ const MenuList = styled.ul`
   left: 0;
   width: 100%;
   padding: 0;
+  .link{
+    text-decoration: none;
+  }
 `;
 
 const IconContainer = styled.span`
@@ -110,7 +136,7 @@ const IconContainer = styled.span`
 `;
 
 
-const Link = styled.a`
+const LinkStyle = styled.a`
   text-decoration: none;
   position: relative;
   width: 100%;

@@ -138,6 +138,5 @@ export const ModalView = styled.div.attrs(props => ({
        margin-right: 80%;
        cursor: pointer;
    }
-
     
 `;
