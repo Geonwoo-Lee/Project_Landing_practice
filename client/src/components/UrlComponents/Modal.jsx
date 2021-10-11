@@ -3,13 +3,14 @@ import React from 'react';
 import * as BsIcons from 'react-icons/bs'
 import shrtcode from '../shorten/api/shrtcode'
 import logo from '../Common/img/logo.png'
-import {ShortWrapper, TextArea, TextInputArea, TextAreaWrap, ButtonWrap,  CancleButton, SubmitButton, ModalBackdrop, ModalContainer, ModalView} from '../utill/Styled'
+import {ShortWrapper, TextArea, TextInputArea, TextAreaWrap, ButtonWrap,  CancleButton, SubmitButton, ModalBackdrop, ModalContainer, ModalView, Select} from '../utill/Styled'
 import { isEmpty } from '../utill/IsEmpty'
 
 // 건우 + 버튼 + 동우 + 모달
 
 const HTTP_URL_VALIDATOR_REGEX = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_.~#?&//=]*)/g;
 
+const selectList = ["카테고리를 설정해 주세요","All", "games", "shopping", "works", "music", "etc", "private"]
 
 export const Modal = ({isOpen, setIsOpen, openModalHandler}) => {
 
@@ -32,6 +33,11 @@ export const Modal = ({isOpen, setIsOpen, openModalHandler}) => {
   const [isLoading, setIsLoading] = useState(false)
   const [isTitle, setIsTitle] = useState('')
   const [isDes, setIsDes] = useState('')
+  const [isSelected, setIsSelected] = useState("")
+
+  const handleSelect = (e) => {
+    setIsSelected(e.target.value);
+  };
 
     const validateURL = (string) => {
         return string.match(HTTP_URL_VALIDATOR_REGEX)
@@ -81,6 +87,14 @@ export const Modal = ({isOpen, setIsOpen, openModalHandler}) => {
             )}
             </ShortWrapper>
                 <TextInputArea placeholder = "Title을 입력해주세요" value = {isTitle} onChange = {(e) => {setIsTitle(e.target.value)}} ></TextInputArea>
+                <Select value = {isSelected} onChange = {handleSelect}>
+                {selectList.map((item) => (
+                    <option value={item} key={item}>
+                      {item}
+                      {console.log(isSelected)}
+                 </option>
+                ))}
+                </Select>
                 <TextArea placeholder= 'URL 상세 정보를 입력해 주세요' value = {isDes} onChange = {(e) => {setIsDes(e.target.value)}}></TextArea>
             </TextAreaWrap>
             <ButtonWrap>

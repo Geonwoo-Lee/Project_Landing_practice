@@ -1,6 +1,26 @@
 import styled from 'styled-components'
 
 
+export const Select = styled.select`
+width: 50%;
+height: 35px;
+background: white;
+color: gray;
+padding-left: 5px;
+font-size: 14px;
+border: none;
+margin-left: 9%;
+margin-top: 10px;
+
+option {
+  color: black;
+  background: white;
+  display: flex;
+  white-space: pre;
+  min-height: 20px;
+  padding: 0px 2px 1px;
+}
+`;
 
 export const UrlComponentWrap = styled.div`
 display: grid;
@@ -32,6 +52,7 @@ margin-right: 30%;
 border-top: none;
 border-left: none;
 border-right: none;
+height: 40px;
 border-bottom: {
     opacity: 20%;
 };
@@ -39,7 +60,7 @@ border-bottom: {
 
 export const TextAreaWrap = styled.div`
 display: grid;
-margin-top: 60px;
+margin-top: 15px;
 width: 900px;
  .cissors{
      margin-left: 80%;
