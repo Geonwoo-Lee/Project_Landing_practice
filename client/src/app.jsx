@@ -11,7 +11,7 @@ import UrlPage from './Pages/UrlPage';
 
 function App() {
   return (
-    <>
+    <div>
     <Switch>
      <Route exact path="/">
      <Landing />
@@ -33,7 +33,7 @@ function App() {
       <SignUp />
    </Route>
    </Switch>
-   </>
+   </div>
   );
 }
 

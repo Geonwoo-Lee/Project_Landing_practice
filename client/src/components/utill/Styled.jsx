@@ -1,6 +1,91 @@
 import styled from 'styled-components'
 
 
+export const ButtonWrapCard = styled.div`
+margin-top: 50px;
+
+`
+
+export const CancleButtonCard = styled.button`
+background-color: transparent;
+padding: 10px;
+width: 80px;
+border-radius: 5px;
+border-color: #FCFFF5;
+font-size: 10px;
+font-family: monospace;
+cursor: pointer;
+margin-right: 20px;
+&:hover{
+     background-color:  #1E6FD9;
+     color: #fff;
+     transition-duration: 1s;
+ }
+`
+
+export const SubmitButtonCard = styled.button`
+background-color: transparent;
+padding: 10px;
+width: 80px;
+border-radius: 5px;
+border-color: #FCFFF5;
+font-size: 10px;
+font-family: monospace;
+cursor: pointer;
+margin-left: 20px;
+&:hover{
+     background-color: #F26D6D;
+     color: #fff;
+     transition-duration: 1s;
+ }
+
+`
+
+export const Card = styled.div`
+  position: relative;
+  width: 220px;
+  height: 150px;
+  perspective: 500px;
+  border-radius: 5px;
+  background-color: pink;
+  &:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 4px rgba(0, 0, 0, 0.2);
+    transition: all;
+  }
+  .p{
+    color: black;
+  }
+  .icons{
+    margin-left: 70%;
+    cursor: pointer;
+  }
+  .trash{
+    margin-top: 30%;
+    margin-right: 10px;
+  }
+`;
+
+
+export const CardModalView = styled.div.attrs(props => ({
+  // attrs 메소드를 이용해서 아래와 같이 div 엘리먼트에 속성을 추가할 수 있습니다.
+  role: 'dialog'
+}))`
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 350px;
+    height: 250px;
+   
+    .header{
+      font-size: 20px;
+      margin-top: 40px;
+    }
+    .message{
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    
+`;
+
 export const Select = styled.select`
 width: 50%;
 height: 35px;

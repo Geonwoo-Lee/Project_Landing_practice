@@ -12,20 +12,15 @@ const HTTP_URL_VALIDATOR_REGEX = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._~#=]{
 
 const selectList = ["카테고리를 설정해 주세요","All", "games", "shopping", "works", "music", "etc", "private"]
 
+
 export const Modal = ({isOpen, setIsOpen, openModalHandler}) => {
+ 
 
   const submitHandler = () => {
-    if(isEmpty(isTitle) === true){
-     alert('제목을 입력해 주세요 !')
-    }
-    if (validateURL(short) === false){
-     alert('유효한 Url이 아닙니다 !')
-    }
-    if (isEmpty(isDes) === true){
-        alert('내용을 입력해 주세요 !')
-    }
     if(validateURL(short) === true){
       setIsOpen(!isOpen)
+    }else{
+      alert('url을 다시 확인해 주세요 ! ')
     }
   }
   const [link, setLink] = useState('')
@@ -87,7 +82,7 @@ export const Modal = ({isOpen, setIsOpen, openModalHandler}) => {
             )}
             </ShortWrapper>
                 <TextInputArea placeholder = "Title을 입력해주세요" value = {isTitle} onChange = {(e) => {setIsTitle(e.target.value)}} ></TextInputArea>
-                <Select value = {isSelected} onChange = {handleSelect}>
+                <Select value = {isSelected} onChange = {handleSelect} >
                 {selectList.map((item) => (
                     <option value={item} key={item}>
                       {item}

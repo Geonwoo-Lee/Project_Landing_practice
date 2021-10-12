@@ -7,7 +7,7 @@ import * as SiIcons from 'react-icons/si'
 import * as GiIcons from 'react-icons/gi'
 
 
-export const Sidebar1= () => {
+export const Navbar= () => {
   return (
     
     <Sidebar>
@@ -164,4 +164,4 @@ const Label = styled.span`
   color: white;
 `;
 
-export default Sidebar1
+export default Navbar
